@@ -11,12 +11,10 @@ def fetch_data(api_key):
         log_file.write("Data fetched successfully\n")
 
 def main():
-    # Load secrets from a JSON file outside the repo (e.g., ~/secrets.json)
-    home = os.path.expanduser("~")
-    secrets_file = os.path.join(home, "secrets.json")
-    with open(secrets_file) as f:
-        secrets = json.load(f)
-    api_key = secrets["abstract_api_key"]
+    load_dotenv()  # reads .env in current directory
+    api_key = os.getenv("ABSTRACT_API_KEY")
+    if not api_key:
+        raise ValueError("API key not found in environment")
     fetch_data(api_key)
 
 if __name__ == "__main__":
