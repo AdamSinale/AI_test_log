@@ -11,7 +11,7 @@ def fetch_data(api_key):
 
 def main():
     load_dotenv()
-    api_key = os.getenv("ABSTRACT_API_KEY")
+    api_key = os.getenv("VAL")
     if not api_key:
         raise ValueError("API key not found in environment")
     fetch_data(api_key)
