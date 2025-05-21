@@ -1,6 +1,7 @@
 # main_log.py
 import json
 import os
+from dotenv import load_dotenv
 
 def fetch_data(api_key):
     print(f"API key in use: {api_key}")
