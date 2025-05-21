@@ -10,7 +10,7 @@ def fetch_data(api_key):
         log_file.write("Data fetched successfully\n")
 
 def main():
-    load_dotenv()  # reads .env in current directory
+    load_dotenv()
     api_key = os.getenv("ABSTRACT_API_KEY")
     if not api_key:
         raise ValueError("API key not found in environment")
