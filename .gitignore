@@ -1,0 +1,19 @@
+# התעלמות מקבצי מערכת
+.DS_Store
+Thumbs.db
+
+# קבצי קונפיג פרטיים
+.env
+config/*.json
+
+# קבצי קומפילציה
+*.pyc
+__pycache__/
+
+# סביבת וירטואלית
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
