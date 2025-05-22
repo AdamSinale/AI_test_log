@@ -10,6 +10,7 @@ def fetch_data(api_key):
         log_file.write("Data fetched successfully\n")
 
 def main():
+    # safe API key. all secrets protected, but prints and logs the Key!!
     load_dotenv()
     api_key = os.getenv("VAL")
     if not api_key:
