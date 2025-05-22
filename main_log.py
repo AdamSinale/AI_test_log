@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 def fetch_data(api_key):
     print(f"API key in use {api_key}")
     with open("app.log", "a") as log_file:
-        log_file.write(f"API key used: {api_key}\n")
+        log_file.write(f"API key used- {api_key}\n")
         log_file.write("Data fetched successfully\n")
 
 def main():
